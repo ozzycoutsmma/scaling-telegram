@@ -1,0 +1,1124 @@
+/* ================= ROOT VARIABLES ================= */
+:root {
+    --accent: #FF6100;
+    --bg1: #2a0d00;
+    --bg2: #ff6100;
+    --text: #333333;
+    --accent2: #331400;
+}
+
+:root {
+    /* Glass base */
+    --glass: rgba(255,255,255,0.12);
+    --glass-border: rgba(255,255,255,0.18);
+    --glass-shadow: rgba(0,0,0,0.25);
+}
+
+:root {
+    --glow: 0 0 15px #FF6100; /* default fallback */
+    --glow2: 0 0 10px #a86135;
+}
+
+@font-face {
+    font-family: 'NextSunday';
+    src: url('stuff/NextSunday.woff2') format('woff2');
+
+    font-weight: normal;
+    font-style: normal;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+* {
+    animation: var(--anim, none);
+}
+
+/* ================= THEMES ================= */
+
+/* Default */
+body.theme-orange {
+    --accent: #FF6100;
+    --accent2: #331400;
+    --bg1: #2a0d00;
+    --bg2: #ff6100;
+    --glass: rgba(255,97,0,0.12);
+    --glass-border: rgba(255,97,0,0.25);
+    --glow: 0 0 15px #FF6100;
+    --glow2: 0 0 10px #a8613588;
+}
+
+/* Starry Night */
+body.theme-starry {
+    --accent: #a855f7;
+    --accent2: #130020;
+    --bg1: #37006e;
+    --bg2: #000000;
+    --glass: rgba(255,255,255,0.08);
+    --glass-border: rgba(132, 0, 255, 0.2);
+    --glow: 0 0 15px #a855f7;
+    --glow2: 0 0 10px #8735a894;
+}
+
+/* Sunset */
+body.theme-sunset {
+    --accent: #ff6100;
+    --accent2: #3b1700;
+    --bg1: #ff6100;
+    --bg2: #6a00ff;
+    --glass: rgba(255,150,0,0.12);
+    --glass-border: rgba(255,150,0,0.25);
+    --glow: 0 0 15px #ff8c00;
+    --glow2: 0 0 10px #a87a3594;
+}
+
+/* Swamp */
+body.theme-swamp {
+    --accent: #00aa55;
+    --accent2: #042200;
+    --bg1: #003311;
+    --bg2: #000000;
+    --glass: rgba(0,255,100,0.12);
+    --glass-border: rgba(0,255,100,0.25);
+    --glow: 0 0 15px #00ff88;
+    --glow2: 0 0 10px #35a83594;
+}
+
+/* Magma */
+body.theme-magma {
+    --accent: #ff4500;
+    --accent2: #330e00;
+    --bg1: #000000;
+    --bg2: #ff4500;
+    --glass: rgba(255,80,0,0.15);
+    --glass-border: rgba(255,80,0,0.3);
+    --glass-shadow: rgba(255,80,0,0.25);
+    --glow: 0 0 15px #ff4500;
+    --glow2: 0 0 10px #a83d3594;
+}
+
+/* Twilight */
+body.theme-twilight {
+    --accent: #0056c7;
+    --accent2: #000c33;
+
+    /* background gradient */
+    --bg1: #002864;
+    --bg2: #00030a;
+    
+    /* glow */
+    --glow: 0 0 15px #003fb4;
+    --glow2: 0 0 10px #3540a894;
+
+    /* glass */
+    --glass: rgba(0, 47, 255, 0.12);
+    --glass-border: rgba(0, 102, 255, 0.25);
+}
+
+/* Void */
+body.theme-void {
+    --accent: #3d3d3d;
+    --accent2: #070707;
+
+    /* background gradient */
+    --bg1: #1b1b1b;
+    --bg2: #000000;
+    
+    /* glow */
+    --glow: 0 0 15px #4b4b4b;
+    --glow2: 0 0 10px #2b2b2b94;
+
+    /* glass */
+    --glass: rgba(53, 53, 53, 0.12);
+    --glass-border: rgba(107, 107, 107, 0.25);
+}
+
+/* Inferno */
+body.theme-inferno {
+    --accent: #ff5e00;
+    --accent2: #330e00;
+
+    /* background gradient */
+    --bg1: #ff3300;
+    --bg2: #ff8800;
+    
+    /* glow */
+    --glow: 0 0 15px #ff5638;
+    --glow2: 0 0 10px #a8353594;
+
+    /* glass */
+    --glass: rgba(199, 46, 0, 0.12);
+    --glass-border: rgba(255, 136, 99, 0.25);
+}
+
+/* Lunar */
+body.theme-lunar {
+    --accent: #968436;
+    --accent2: #1e1f00;
+
+    /* background gradient */
+    --bg1: #000000;
+    --bg2: #d6ba3d;
+    
+    /* glow */
+    --glow: 0 0 15px #cfb72e;
+    --glow2: 0 0 10px #a8933594;
+    
+    /* glass */
+    --glass: rgba(177, 169, 64, 0.12);
+    --glass-border: rgba(255, 233, 110, 0.25);
+    
+}
+
+/* Lunar */
+body.theme-noir {
+    --accent: #7c7c7c;
+    --accent2: #2c2c2c;
+
+    /* background gradient */
+    --bg1: #000000;
+    --bg2: #000000;
+    
+    /* glow */
+    --glow: 0 0 15px #a8a8a8;
+    --glow2: 0 0 10px #5e5e5e94;
+    
+    /* glass */
+    --glass: rgba(146, 146, 146, 0.12);
+    --glass-border: rgba(255, 255, 255, 0.25);
+    
+}
+
+/* ================= BASE ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: var(--text);
+
+    background: linear-gradient(to bottom, var(--bg1), var(--bg2));
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'NextSunday', NextSunday;
+
+    cursor: url(/images/cursors/theme-orange.png), default!important
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body.theme-magma {
+    background: linear-gradient(to right, var(--bg1), var(--bg2));
+}
+
+h2 {
+    display: inline-block;
+
+    background: transparent;
+    color: rgb(255, 255, 255);
+
+    padding: 8px 16px;
+    border-radius: 10px;
+
+    margin-bottom: 15px;
+
+    font-size: 18px;
+}
+
+.black-text {
+    color:#000000
+}
+
+.bottom-bar {
+    position: fixed;
+    bottom: 0;
+
+    height: 80px; /* lock height */
+    width: 100%;
+}
+
+/* ================= BACKGROUND HEXAGONS ================= */
+
+#bg-container {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.hex {
+    position: absolute;
+
+    background: white;
+    opacity: 0.7;
+
+    clip-path: polygon(
+        25% 5%, 75% 5%,
+        100% 50%,
+        75% 95%, 25% 95%,
+        0% 50%
+    );
+
+    animation: fall linear infinite,
+               spin linear infinite,
+               drift ease-in-out infinite;
+}
+
+/* Falling */
+@keyframes fall {
+    from {
+        transform: translateY(-10vh);
+    }
+    to {
+        transform: translateY(110vh);
+    }
+}
+
+/* Spinning */
+@keyframes spin {
+    from {
+        rotate: 0deg;
+    }
+    to {
+        rotate: 360deg;
+    }
+}
+
+@keyframes rise {
+    from {
+        transform: translateY(110vh);
+    }
+    to {
+        transform: translateY(-10vh);
+    }
+}
+
+@keyframes drift {
+    0%   { transform: translateX(0px); }
+    50%  { transform: translateX(40px); }
+    100% { transform: translateX(0px); }
+}
+
+/* ================= PARTICLE CONTAINER ================= */
+/* This holds ALL particles so they don't affect layout */
+#bg-container {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    z-index: -1;
+}
+
+/* ================= PARTICLE STYLE ================= */
+/* Each particle is a single "object" created in JS */
+.particle {
+    position: absolute;
+
+    width: 18px;
+    height: 18px;
+
+    opacity: 0.5;
+
+    /* HEX SHAPE (Arctic-style look) */
+    clip-path: polygon(
+        25% 5%, 75% 5%,
+        100% 50%,
+        75% 95%, 25% 95%,
+        0% 50%
+    );
+
+    /* smooth movement */
+    will-change: transform;
+}
+
+/* ================= TOP BAR ================= */
+
+.top-ui {
+    width: 1610px;
+    height: 95px;
+
+    position: fixed;
+    top: 20px;
+    left: 125px;
+    right: 125px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 12px 18px;
+
+    background: var(--glass);
+    border: 2px solid var(--glass-border);
+    box-shadow: 0 10px 30px var(--glass-shadow);
+    backdrop-filter: blur(14px);
+
+    --anim: fadeUp 0.9s ease forwards;
+}
+
+
+/* ================= LOGO ================= */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 8px 12px;
+
+    border-radius: 14px;
+
+    background: rgba(255,255,255,0.1);
+
+    text-decoration: none;
+    color: black;
+
+    transition: all 0.25s ease;
+}
+
+.logo img {
+    width: 32px;
+}
+
+.logo:hover {
+    box-shadow: 0 0 15px var(--accent);
+    transform: translateY(-2px);
+}
+
+
+/* ================= NAV BUTTONS ================= */
+
+.nav-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 8px;
+    border-radius: 12px;
+
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+.nav-btn:hover {
+    box-shadow: 0 10px 30px var(--glow);
+    border: 3px solid var(--accent);
+}
+
+.nav-btn img {
+    width: 36px;
+}
+
+.nav-btn span {
+    font-size: 12px;
+}
+
+.nav-color {
+    color: rgb(182, 182, 182);
+}
+
+.nav-color2 {
+    color: rgb(255, 255, 255);
+    --anim: fadeUp 0.9s ease forwards;
+}
+
+/* ================= MAIN CENTER ================= */
+
+.main {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* ================= SEARCH BOX ================= */
+
+.search-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 650px;
+    padding: 30px;
+
+    border-radius: 40px;
+
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(12px);
+
+    border: 3px solid var(--glass-border);
+
+    transition: 0.3s ease;
+
+    box-shadow: var(--glow2);
+
+    cursor: text;
+}
+
+/* Glow on focus */
+.search-box:focus-within {
+    border-color: var(--accent);
+    box-shadow: 0 0 15px var(--accent);
+}
+
+
+/* INPUT */
+.search-box input {
+    all: unset;              /* 🔥 removes ALL default browser styling */
+
+    flex: 1;
+    width: 100%;        /* 🔥 ensures full width */
+    height: 100%;       /* 🔥 fills height */
+    
+    color: white;
+
+    font-size: 25px;
+    text-align: center;
+
+    cursor: text;       /* makes cursor appear correctly */
+}
+
+.search-box:hover {
+    border: 3px solid var(--accent)
+}
+
+/* Icons */
+.search-box .icon {
+    margin: 0 10px;
+    opacity: 0.7;
+}
+
+.search-box input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* ================= DISCORD BUTTON ================= */
+
+.discord-btn {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+
+    width: 65px;
+    height: 65px;
+
+    border-radius: 16px;
+    background: transparent;
+    border: transparent;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+
+.discord-btn img {
+    width: 36px;
+}
+
+
+/* ================= SHORTCUTS ================= */
+
+.shortcuts-container {
+    padding: 160px 40px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.shortcut-row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.shortcut {
+    width: 170px;
+    height: 170px;
+    padding: 15px;
+
+    background: var(--glass);
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 10px 30px var(--glass-shadow);
+    backdrop-filter: blur(14px);
+
+    text-align: center;
+}
+
+.shortcut img {
+    width: 110px;
+    height: 110px;
+    border-radius: 15px;
+}
+
+.add-shortcut {
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup {
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0,0,0,0.5);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 1000;
+}
+
+.popup-content {
+    background: rgba(51, 51, 51, 0.2);
+    padding: 25px;
+
+    border-radius: 16px;
+
+    backdrop-filter: blur(12px);
+
+    text-align: center;
+
+    box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+}
+
+.popup-color {
+    color:#949494
+}
+
+
+/* ============== partners =============== */
+.partner-page {
+    padding: 160px 40px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+
+/* ================= SETTINGS ================= */
+
+.settings-container {
+    padding-top: 140px;
+
+    display: grid;
+    grid-template-columns: repeat(4, 305px);
+
+    align-items: start;
+    justify-content: center; /* centers tiles */
+
+    gap: 23px; /* MORE SPACE between tiles */
+}
+
+.settings-box {
+    width: 300px;
+    height: 300px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background: var(--glass);
+    border: 3px solid var(--glass-border);
+    box-shadow: 0 10px 30px var(--glass-shadow);
+    backdrop-filter: blur(14px);
+
+    text-align: center;
+
+    transition: all 0.25s ease;
+
+}
+
+.settings-container2 {
+    padding-top: 30px;
+
+    display: flex;
+    grid-template-columns: repeat(4, 310px);
+
+    align-items: start;
+    justify-content: center; /* centers tiles */
+
+    gap: 30px; /* MORE SPACE between tiles */
+}
+
+.settings-box2 {
+    width: 408px;
+    height: 300px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background: var(--glass);
+    border: 3px solid var(--glass-border);
+    box-shadow: 0 10px 30px var(--glass-shadow);
+    backdrop-filter: blur(14px);
+    border-radius: 20px;
+
+    text-align: center;
+
+    transition: all 0.25s ease;
+
+}
+
+.settings-box input {
+    width: 80%;
+
+    padding: 10px 12px;
+
+    border-radius: 20px;
+    border: 2px solid var(--glass-border);
+    outline: none;
+
+    font-size: 14px;
+
+    background: rgba(0,0,0,0.3);
+    backdrop-filter: blur(8px);
+
+    color: white;
+
+    transition: 0.25s ease;
+}
+
+.settings-box input::placeholder {
+    color: rgba(255,255,255,0.5);
+}
+
+.setting-item {
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 15px;
+}
+
+.setting-item label {
+    margin-bottom: 5px;
+    font-size: 13px;
+    opacity: 0.8;
+}
+
+.preset-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-bottom: -15px;
+}
+
+.preset-grid button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 50px;
+    height: 50px;
+
+    padding: 12px;
+
+    border-radius: 15px;
+    border: 3px solid var(--glass-border);
+
+    background: rgba(0,0,0,0.3);
+    color: white;
+    box-shadow: 0 10px 30px var(--glass-shadow);
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.preset-grid button img {
+    width: 20px;
+    height: 20px;
+}
+
+.preset-grid button:hover {
+    box-shadow: 0 10px 30px var(--glow);
+    transform: scale(1.07);
+    border: 3px solid var(--accent);
+}
+
+.preset-grid button:active {
+    transform: scale(0.95);
+    border: 3px solid var(--accent);
+}
+
+select, button {
+    width: 200px;
+    height: 50px;
+
+    margin-top: 10px;
+    padding: 10px;
+
+    border-radius: 30px;
+    border: 3px solid var(--glass-border);
+
+    background: var(--accent2);
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-family: 'NextSunday', NextSunday;
+}
+
+.tabcloaknone button {
+    width: 240px;
+    height: 50px;
+
+    padding: 12px;
+
+    border-radius: 15px;
+    border: 3px solid var(--glass-border);
+
+    background: rgba(0,0,0,0.3);
+    color: white;
+    box-shadow: 0 10px 30px var(--glass-shadow);
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.tabcloaknone button:hover {
+    box-shadow: 0 10px 30px var(--glow);
+    transform: scale(1.07);
+    border: 3px solid var(--accent);
+}
+
+.tabcloaknone button:active {
+    transform: scale(0.95);
+    border: 3px solid var(--accent);
+}
+
+.tabcloaknone button img {
+    width: 20px;
+    height: 20px;
+}
+
+button:hover {
+    border: 3px solid var(--accent);
+}
+
+select:hover {
+    border: 3px solid var(--accent);
+}
+
+/* DROPDOWN OPTIONS */
+select option {
+    background: black;
+    color: white;
+    font-family: 'NextSunday', NextSunday;
+}
+
+button:active {
+    transform: scale(0.95);
+    border: 3px solid var(--accent);
+}
+
+/* ================= BROWSER ================= */
+
+.browser-bar {
+    display: flex;
+    gap: 8px;
+    padding: 6px;
+
+    background: var(--glass);
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 10px 30px var(--glass-shadow);
+    backdrop-filter: blur(14px);
+
+    height: 38px;
+}
+
+.browser-bar input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+}
+
+#browserFrame {
+    width: 100%;
+    height: calc(100vh - 60px);
+    border: none;
+}
+
+.browser-bar button {
+    padding: 5px 8px;
+    font-size: 12px;
+    height: 35px;
+    width: 35px;
+    margin-top: 0px;
+}
+
+
+/* ================= TABS ================= */
+
+.tab-bar {
+    display: flex;
+    gap: 10px;
+    padding: 5px 10px;
+}
+
+.tab {
+    background: rgba(255,255,255,0.3);
+    padding: 5px 10px;
+    border-radius: 10px;
+
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.tab.active {
+    background: var(--accent);
+}
+
+.tab button {
+    background: black;
+    color: white;
+    border-radius: 6px;
+    padding: 2px 6px;
+    font-size: 10px;
+
+    height: 30px;
+    width: 40px;
+    margin-top: 0px;
+}
+
+
+/* ================= MENU ================= */
+
+.menu {
+    position: fixed;
+    top: 70px;
+    right: 10px;
+
+    background: rgba(0,0,0,0.85);
+    border-radius: 12px;
+    padding: 12px;
+
+    display: none;
+
+    flex-direction: column;   /* 🔥 REQUIRED */
+    gap: 10px;
+
+    z-index: 1000;            /* 🔥 prevents it being behind stuff */
+}
+
+.hidden {
+    display: none;
+}
+
+.menu button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 6px 10px;
+
+    font-size: 14px;
+}
+
+.menu button img {
+    width: 18px;
+}
+
+
+/* ================= GLOW EFFECT ================= */
+
+button,
+.nav-btn,
+.shortcut,
+.settings-box {
+    transition: all 0.25s ease;
+}
+
+button:hover,
+.shortcut:hover,
+.settings-box:hover,
+.settings-box2:hover {
+    box-shadow: 0 10px 30px var(--glow);
+    transform: scale(1.07);
+    border: 3px solid var(--accent);
+    
+    transform: translateY(-4px) scale(1.02);
+}
+
+/* ================= FORCE ROUNDED UI ================= */
+.top-ui,
+.settings-box,
+.shortcut,
+.browser-bar,
+.menu,
+.nav-btn,
+.logo {
+    border-radius: 18px !important;
+}
+
+/* =============== BROWSER UI =============== */
+
+/* bottom bar */
+.bottom-bar {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 90%;            /* 🔥 makes it less wide */
+    max-width: 900px;      /* prevents stretching */
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 10px 15px;
+
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(10px);
+
+    border-radius: 20px;
+}
+
+/* url row */
+.url-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* logo */
+.nav-logo {
+    width: 28px;
+    cursor: pointer;
+}
+
+/* url box */
+#urlInput {
+    flex: 1;
+
+    padding: 10px;
+    border-radius: 20px;
+
+    border: none;
+    outline: none;
+
+    background: rgba(0,0,0,0.7);
+    color: white;
+}
+
+/* menu button */
+.menu-btn {
+    width: 28px;
+    cursor: pointer;
+}
+
+/* bottom nav buttons */
+.nav-buttons {
+    display: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 8px;
+}
+
+.nav-buttons img {
+    width: 24px;
+    cursor: pointer;
+}
+
+/* slide panel */
+.tabs-panel {
+    position: fixed;
+    top: 0;
+    right: -100%; /* hidden */
+
+    width: 300px;
+    height: 100%;
+
+    background: var(--accent2);
+
+    transition: right 0.3s ease;
+}
+
+/* when open */
+.tabs-panel.active {
+    right: 0;
+}
+
+/* header */
+.tabs-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    font-size: 20px;
+}
+
+/* tab */
+.tab {
+    padding: 12px;
+    margin: 10px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 10px;
+    color: #FFFFFF;
+}
+
+#urlInput {
+    flex: 1;   /* 🔥 makes it fill space */
+
+    padding: 10px 12px;
+    border-radius: 20px;
+
+    border: none;
+    outline: none;
+
+    background: rgba(0,0,0,0.7);
+    color: white;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.nav-buttons img,
+.menu-btn,
+.nav-logo {
+    width: 24px;
+    cursor: pointer;
+}
+
+#browserFrame {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: calc(100vh - 80px); /* adjust to your bottom bar height */
+
+    border: none;
+}

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Turbine 1.0</title>
+
+    <link id="favicon" rel="icon" href="images/loader.png">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<!-- ================= BACKGROUND ================= -->
+<div id="bg-container"></div>
+
+<!-- ================= TOP BAR ================= -->
+<div class="top-ui">
+
+    <a href="index.html" class="nav-btn">
+        <img src="images/loader.png" alt="logo">
+        <span>Turbine 1.0</span>
+    </a>
+
+    <div class="nav-buttons">
+
+        <!-- Partners -->
+        <a href="partners.html" class="nav-btn">
+            <img src="images/partner.png">
+            <span>Partners</span>
+        </a>
+
+        <!-- Gxmes -->
+        <a href="turbinegxmes.html" class="nav-btn">
+            <img src="images/controller.png">
+            <span>Gxmes</span>
+        </a>
+
+        <!-- Apps -->
+        <a href="apps.html" class="nav-btn">
+            <img src="images/apps2.png">
+            <span>Apps</span>
+        </a>
+
+        <!-- Settings -->
+        <a href="settings.html" class="nav-btn">
+            <img src="images/settings2.png">
+            <span>Settings</span>
+        </a>
+
+    </div>
+</div>
+
+<!-- ================= MAIN SETTINGS ================= -->
+<div class="settings-container">
+
+
+    <!-- ================= cloaking ================= -->
+    <div class="settings-box">
+
+        <h2 class="nav-color2">Tab Cloak</h2>
+        <p class="nav-color2">The first google is a fake search, the second is just Google</p>
+
+        <div class="preset-grid">
+
+            <button onclick="drivePreset()">
+                <img src="images/drive.png">
+            </button>
+
+            <button onclick="docsPreset()">
+                <img src="images/docs.png">
+            </button>
+
+            <button onclick="gmailPreset()">
+                <img src="images/gmail.png">
+            </button>
+
+            <button onclick="ytPreset()">
+                <img src="images/youtube.png">
+            </button>
+
+            <button onclick="classPreset()">
+                <img src="images/classroom.png">
+            </button>
+
+            <button onclick="khanPreset()">
+                <img src="images/khan.png">
+            </button>
+
+            <button onclick="fakePreset()">
+                <img src="images/favicon-1.png">
+            </button>
+
+            <button onclick="googlePreset()">
+                <img src="images/favicon-1.png">
+            </button>
+
+        </div>
+        <br>
+        <div class="tabcloaknone">
+                    
+            <button onclick="defaultPreset()">
+                <img src="images/none.png">
+           </button>
+
+        </div>
+
+    </div>
+
+    <!-- Panic Key -->
+    <div class="settings-box">
+
+        <h3 class="nav-color2">Panic Key</h3>
+
+        <p class="nav-color2">Press a key to set panic key</p>
+
+        <br>
+
+        <input 
+            id="panicKeyInput" 
+            placeholder="Click to set key" 
+            readonly 
+            onclick="detectPanicKey()"
+        >
+
+        <div style="display: grid; grid-template-columns: repeat(1, 200px);">
+            <button onclick="savePanicKey()">Save</button>
+            <button onclick="removePanicKey()">Remove</button>
+        </div>
+
+    </div>
+
+    <!-- ==================== Leave Confirm ====================== -->
+
+    <div class="settings-box">
+
+        <h2>Leave Confirmation</h2>
+        <p class="nav-color2">Shows a pop up when you try to close the website</p>
+
+        <button onclick="enableLeave()">Enable</button>
+        <button onclick="disableLeave()">Disable</button>
+
+    </div>
+
+
+    <div class="settings-box">
+
+    <!-- ===================================================== -->
+    <!-- ================= THEMES ============================= -->
+    <!-- ===================================================== -->
+        
+        <h2>Themes</h2>
+        <p class="nav-color2">Choose one of the 10 themes to customize your experience :nerd:</p>
+
+        <!-- THEME DROPDOWN -->
+        <select class="options" onchange="setTheme(this.value)">
+            <option value="" disabled selected>Select Theme</option>
+            <option value="theme-orange">Turbine 1.0 (Default)</option>
+            <option value="theme-starry">Starry Night</option>
+            <option value="theme-sunset">Sunset</option>
+            <option value="theme-swamp">Binary</option>
+            <option value="theme-magma">Magma</option>
+            <option value="theme-twilight">Twilight</option>
+            <option value="theme-void">Void</option>
+            <option value="theme-inferno">Inferno</option>
+            <option value="theme-lunar">Gas</option>
+            <option value="theme-noir">Noir</option>
+        </select>
+
+    </div>
+</div>
+
+<div class="settings-container2">
+    <!-- ===================================================== -->
+    <!-- ================= GRAPHICS =========================== -->
+    <!-- ===================================================== -->
+    <div class="settings-box2">
+
+        <h2>Particles</h2>
+        <p class="nav-color2">Toggles Particles in the background to boost frames (tbh, not even sure if this does anything)</p>
+
+        <button onclick="toggleParticles()">Toggle</button> <!-- toggles background particles -->
+
+    </div>
+
+    <!-- ===================================================== -->
+    <!-- ================= WELCOME QUOTES ===================== -->
+    <!-- ===================================================== -->
+    <div class="settings-box2">
+
+        <h2>Welcome Quotes</h2>
+        <p class="nav-color2">Enable or disable random quotes on the home page</p>
+
+        <button onclick="setQuotes(true)">Enable</button>
+        <button onclick="setQuotes(false)">Disable</button>
+
+    </div>
+    <!-- about:blank -->
+    <div class="settings-box2">
+        <h2>About:Blank Cloak</h2>
+        <p class="nav-color2">Redirect Presets coming soon. Redirect hides the site from your history.</p>
+        <button onclick="openAboutBlank()">Cloak</button>
+    </div>
+
+</div>
+
+<!-- ================= DISCORD BUTTON ================= -->
+<a href="https://discord.gg/jbDZm9hpT9" target="_blank" class="discord-btn">
+    <img src="images/discord2.png">
+</a>
+
+<!-- ================= SCRIPT ================= -->
+<script src="script.js"></script>
+
+</body>
+</html>

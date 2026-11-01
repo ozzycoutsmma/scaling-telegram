@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Turbine 1.0</title>
+
+    <link id="favicon" rel="icon" href="images/loader.png">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<!-- ================= BACKGROUND ================= -->
+<div id="bg-container"></div>
+
+<!-- ================= TOP BAR ================= -->
+<div class="top-ui">
+
+    <a href="index.html" class="nav-btn">
+        <img src="images/loader.png" alt="logo">
+        <span>Turbine 1.0</span>
+    </a>
+
+    <div class="nav-buttons">
+
+        <!-- Gxmes -->
+        <a href="turbinegxmes.html" class="nav-btn">
+            <img src="images/controller.png">
+            <span>Gxmes</span>
+        </a>
+
+        <!-- Apps -->
+        <a href="apps.html" class="nav-btn">
+            <img src="images/apps2.png">
+            <span>Apps</span>
+        </a>
+
+        <!-- Settings -->
+        <a href="settings.html" class="nav-btn">
+            <img src="images/settings2.png">
+            <span>Settings</span>
+        </a>
+
+    </div>
+</div>
+
+<!-- ================= MAIN CONTENT ================= -->
+<div class="shortcuts-container">
+
+    <!-- ===================================================== -->
+    <!-- ================= GAMES SECTION ====================== -->
+    <!-- ===================================================== -->
+    <h2>Games</h2>
+
+    <div class="shortcut-row">
+
+        <!-- ===== EDIT THIS BLOCK TO ADD A GAME ===== -->
+        <!-- COPY THIS ENTIRE BLOCK TO ADD MORE -->
+        <div class="shortcut" onclick="openShortcut('https://www.coolmathgames.com')">
+
+            <!-- ICON -->
+            <img src="images/Coolmath_Games.png">
+
+            <!-- TITLE -->
+            <span class="nav-color2">CoolMath</span>
+
+        </div>
+
+        <div class="shortcut" onclick="openShortcut('https://gn-math.dev')">
+
+            <!-- ICON -->
+            <img src="images/unnamed.jpg">
+
+            <!-- TITLE -->
+            <span class="nav-color2">GnMath</span>
+
+        </div>
+
+
+        <!-- ===== ADD BUTTON ===== -->
+        <div class="shortcut add-shortcut" onclick="openAddMenu()">
+            <span class="nav-color2">+</span>
+        </div>
+
+    </div>
+
+
+    <!-- ===================================================== -->
+    <!-- ================= APPS SECTION ======================= -->
+    <!-- ===================================================== -->
+    <h2>Apps</h2>
+
+    <div class="shortcut-row">
+
+        <div class="shortcut" onclick="openShortcut('https://watch.spencerdevs.xyz')">
+            <img src="images/spenflix.png">
+            <span class="nav-color2">Spenflix Movies</span>
+        </div>
+
+        <div class="shortcut add-shortcut" onclick="openAddMenu()">
+            <span class="nav-color2">+</span>
+        </div>
+
+    </div>
+
+
+    <!-- ===================================================== -->
+    <!-- ================= PARTNERS SECTION =================== -->
+    <!-- ===================================================== -->
+    <h2>Partners</h2>
+
+    <div class="shortcut-row">
+
+        <!-- PLACEHOLDER (DOES NOT REDIRECT) -->
+        <div class="shortcut" onclick="openPartnerInfo()">
+            <img src="images/placeholder.png">
+            <span class="nav-color2">Become a Partner</span>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ================= PARTNER POPUP ================= -->
+<div id="partner-popup" class="popup hidden">
+
+    <div class="popup-content">
+
+        <h2>Become a Partner</h2>
+
+        <p class="popup-color">
+            Want your site featured here?<br>
+            Join the Discord and apply!
+        </p>
+
+        <!-- CLOSE BUTTON -->
+        <button onclick="closePopup()">Close</button>
+
+    </div>
+</div>
+
+<!-- ================= DISCORD BUTTON ================= -->
+<a href="https://discord.gg/jbDZm9hpT9" target="_blank" class="discord-btn">
+    <img src="images/discord2.png">
+</a>
+
+<!-- ================= SCRIPT ================= -->
+<script src="script.js"></script>
+
+</body>
+</html>
